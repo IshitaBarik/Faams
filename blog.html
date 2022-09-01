@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+        <!--Icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--External link-->
+        <link rel="stylesheet" href="css/blog.css">
+    </head>
+    <body>
+
+        <!-- Navigation starts -->
+        <nav id="navbar">
+            <div class="inner flex-box">
+                <div class="logo">
+                    <img src="img/logo (1).png" alt="">
+                </div>
+                <span class="fa fa-bars" id="hamburger"></span>
+                <ul id="navbar-collapse" class="flex-box">
+                    <span class="fa fa-close"  id="hamburger2"></span>
+                    <li><a href="index.html" class="activehome">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#"><span class="fa fa-shopping-cart"></span></a></li>
+                    <li>
+                        <a href="#"> <label class="search" for="inpt_search">
+                            <input id="inpt_search" type="text" />
+                        </label></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Navigation ends -->
+        
+                <!-- shop area starts -->
+                <div class="shop">
+                    <h1>Why Shop With Us</h1>
+                    <div class="border"></div>
+                    <div class="inner flex-box">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="img/shipped.png" alt="">
+                            </div>
+                            <h1>Fast Delivery</h1>
+                            <p>variations of passages of Lorem Ipsum available</p>
+                        </div>
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="img/173887-tag-png-download-free.png" alt="">
+                            </div>
+                            <h1>Free Shiping</h1>
+                            <p>variations of passages of Lorem Ipsum available</p>
+                        </div>
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="img/Badge-93.png" alt="">
+                            </div>
+                            <h1>Best Quality</h1>
+                            <p>variations of passages of Lorem Ipsum available</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- shop area ends -->
+        <script>
+        var hamburger = document.getElementById("hamburger");
+        hamburger.addEventListener('click',function(){
+            var navbar = document.getElementById("navbar-collapse").classList.toggle("opened-navigation");
+        });
+        var hamburger2 = document.getElementById("hamburger2");
+        hamburger2.addEventListener('click',function(){
+            var navbar = document.getElementById("navbar-collapse").classList.toggle("opened-navigation");
+        });
+        </script>
+    </body>
+</html>

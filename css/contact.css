@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  body {
+    font-family: "Playfair Display", serif;
+    margin: 0;
+    padding: 0;
+  }
+  .flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+  }
+  
+  /* Navigation starts */
+  nav {
+    position: fixed;
+    height: 80px;
+    top:0;
+    left: 0;
+    width:100%;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100000;
+  }
+  nav .flex-box{
+    align-items: center;
+  }
+  nav #hamburger , nav #hamburger2{
+    display: none;
+  }
+  nav .fa-shopping-cart{
+    font-size: 2rem;
+  }
+  nav .logo{
+    width:250px;
+  }
+  nav .logo img{
+    width:100%;
+  }
+  nav li{
+    list-style: none;
+  }
+  nav li a{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    margin-right: 50px;
+    color:#000;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  nav li .activehome{
+    color:#f7444e;
+  }
+  nav li a:hover{
+    color: #f7444e;
+  }
+  .search {
+      display: inline-block;
+      position: relative;
+      height: 35px;
+      width: 35px;
+      box-sizing: border-box;
+      margin: 0px 8px 7px 0px;
+      padding: 7px 9px 0px 9px;
+      border: 3px solid #000;
+      border-radius: 25px;
+      transition: all 200ms ease;
+      cursor: text;
+  }
+  .search:after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    right: -5px;
+    top: 21px;
+    background:#000;
+    border-radius: 3px;
+    transform: rotate(-45deg);
+    transition: all 200ms ease;
+  }
+  .search.active , .search:hover {
+      width: 200px;
+      margin-right: 0px;
+  }
+  .search.active:after {
+    height: 0px;	
+  }
+  input {
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    font-size: 15px;
+    color: inherit;
+    background: transparent;
+    outline-width: 0px;
+  }
+  nav ul{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  /* Navigation ends */
+
+  /* Contact Area Starts */
+  .contact{
+    margin-top: 80px;
+    text-align: center;
+  }
+  .contact .heading{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7444e;
+    padding: 25px 0px;
+    color: #fff;
+    text-align: center;
+  }
+  .contact h1{
+    font-size: 2.5rem;
+  }
+  .contact .form-area{
+    width:50%;
+    margin: 0 auto;
+    height: 70px;
+  }
+  .contact .form-area {
+    width:50%;
+    height: 60px;
+    margin-top: 70px;
+  }
+  .contact .form-area input{
+    font-family: 'Montserrat', sans-serif;
+    width:100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 25px 0px 25px 8px;
+    margin-top: 20px;
+  }
+  .contact .form-area textarea{
+    font-family: 'Montserrat', sans-serif;
+    width:100%;
+    height:160px;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    outline: 0;
+    padding: 8px 0px 0px 5px;
+    font-size: 1.03rem;
+  }
+  .contact .submit{
+    width:150px;
+    font-weight: 600;
+    height: 50px;
+    background-color: #555;
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 380px;
+    margin-bottom: 40px;
+    border: none;
+  }
+  @media only screen and (max-width:1059px){
+    nav .logo {
+      width: 200px;
+    }
+    nav li a{
+      margin-right: 20px;
+    }
+}
+@media only screen and (max-width:991px){
+    nav .flex-box{
+        justify-content: space-around;
+      }
+      nav .logo {
+        width: 250px;
+      }
+      nav #hamburger, nav #hamburger2 {
+        font-size: 2rem;
+      }   
+      #navbar-collapse.opened-navigation{
+      right:0;
+      }
+      nav #hamburger , nav #hamburger2{
+      display: block;
+    }
+    #navbar-collapse{
+      position: fixed;
+      right:-800px;
+      top:0px;
+      z-index: 1000;
+      text-align: center;
+      width:70vh;
+      height: 100vh;
+      padding-top: 40px;
+      overflow-y: auto;
+      background-color: #000;
+      transition: .5s;
+      display: block;
+    }
+    #navbar-collapse li{
+      margin:45px 0px;
+    }
+    .search {
+      border: 3px solid #fff;
+    }
+    .search:after {
+      background:#fff;
+    }
+    ul.flex-box{
+      flex-direction: column;
+    }
+    nav #hamburger , nav #hamburger2{
+      color: #f7444e;
+    }
+    nav li a{
+      color:#fff;
+    }
+    nav ul{
+      margin-top: 0px;
+    }
+    nav #hamburger2 {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+    .contact .form-area {
+        width: 80%;
+    }
+}
+@media only  screen and (max-width:500px){
+    nav .logo {
+      width: 150px;
+    }
+    nav #hamburger, nav #hamburger2 {
+      font-size: 1.4rem;
+    }
+    nav .flex-box {
+      justify-content: space-around;
+    }
+    #navbar-collapse{
+      width: 100%;
+    }
+    nav #hamburger2 {
+      width: 100%;
+      text-align: center;
+      right: -6px;
+      top:30px;
+    }
+    nav li a {
+      margin-right: 20px;
+      font-size: 0.9rem;
+    }
+    nav #hamburger, nav #hamburger2 {
+        font-size: 1.1rem;
+    }
+    #navbar-collapse li {
+        margin: 20px 0px;
+    }
+    #navbar-collapse{
+        padding-top: 80px;
+    }
+    .contact h1 {
+        font-size: 2rem;
+    }
+    .contact .form-area input {
+        font-size: 0.9rem;
+    }
+    .contact .form-area textarea{
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width:425px){
+    nav .logo {
+      width: 120px;
+    }
+    .contact .submit {
+        width: 160px;
+        font-size: 0.9rem;
+        height: 40px;
+    }
+}
+@media only screen and (max-width:375px){
+    nav li a {
+      margin-right: 20px;
+      font-size: 0.8rem;
+    }
+    nav .fa-shopping-cart {
+      font-size: 1.3rem;
+    }
+    .search {
+        height: 25px;
+        width: 25px;
+        padding: 2px 9px 0px 9px;
+    }
+    .search:after {
+        top: 13px;
+    }
+    .contact .form-area input {
+        font-size: 0.8rem;
+    }
+    .contact h1 {
+        font-size: 1.7rem;
+    }
+}
+   
